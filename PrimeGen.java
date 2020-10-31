@@ -1,5 +1,17 @@
 import java.util.Scanner;
 
+/**
+ * NAME: SAMUEL WOODS
+ * DATE: 10/31/2020
+ * 
+ * This program calculates and prints to terminal 
+ * the number of prime numbers between 0 and n 
+ * where n is specified by the user
+ */
+
+ /**
+  * This classes' purpose is to contain the main method
+  */
 public class PrimeGen {
     public static void main(String[] args) {
         
@@ -10,13 +22,14 @@ public class PrimeGen {
 
         long start = System.nanoTime();
         System.out.println("Computing...");
-        System.out.println("2");
 
+        System.out.println("2");
         int primes = 1;
-        int num;
-        for (int i = 3; i < upper; i+=2) {
+        
+        int num; //counts the number of elements that divide i//
+        for (int i = 3; i < upper; i+=2) {//only tries odds//
             num = 0;
-            for (int j = 2; j <= i/2; j++) {
+            for (int j = 2; j <= i/2; j++) {//n can only be divided by numbers half of it//
                 if (i % j == 0) {
                     num++;
                     break;
